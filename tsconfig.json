@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable",
+      "ScriptHost"
+    ],
+    "baseUrl": ".",
+    "types": [
+      "vite/client"
+    ],
+    "typeRoots": ["./src/types"],
+    "paths": {
+      "preact/*": ["./stub/empty.d.ts"], // https://github.com/johnsoncodehk/volar/discussions/592#discussioncomment-2163786
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "exclude": ["public/**/*", "node_modules", "src/vendors/*"],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
